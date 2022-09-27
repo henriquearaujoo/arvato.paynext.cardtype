@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{53CB95B7-3867-44B2-9A97-7DE8E96F51F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{7B186AED-A8DA-4FFF-9B3F-3CCD2A0B89DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{54F4635E-5737-47E8-852A-547C69637347}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{413F55CF-28A0-4402-AF15-5F45DF68BB46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arvato.Paynext.Tests", "test\Arvato.Paynext.Tests\Arvato.Paynext.Tests.csproj", "{D51EC896-1F9B-459B-A09E-618BC1FD475D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arvato.Paynext", "src\Arvato.Paynext\Arvato.Paynext.csproj", "{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{FFD981B9-87FD-46E2-A14D-89B77BD42970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.Paynext.Application", "src\Arvato.Paynext.Application\Arvato.Paynext.Application.csproj", "{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.Paynext.WebApi", "src\Arvato.Paynext.WebApi\Arvato.Paynext.WebApi.csproj", "{9E39847A-1631-4905-ADC4-5709C6AD1E94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D51EC896-1F9B-459B-A09E-618BC1FD475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51EC896-1F9B-459B-A09E-618BC1FD475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51EC896-1F9B-459B-A09E-618BC1FD475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51EC896-1F9B-459B-A09E-618BC1FD475D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E39847A-1631-4905-ADC4-5709C6AD1E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E39847A-1631-4905-ADC4-5709C6AD1E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E39847A-1631-4905-ADC4-5709C6AD1E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E39847A-1631-4905-ADC4-5709C6AD1E94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D51EC896-1F9B-459B-A09E-618BC1FD475D} = {413F55CF-28A0-4402-AF15-5F45DF68BB46}
+		{CADD62B7-7DEA-443B-81CE-BC0A8A9533F0} = {53CB95B7-3867-44B2-9A97-7DE8E96F51F0}
+		{FFD981B9-87FD-46E2-A14D-89B77BD42970} = {54F4635E-5737-47E8-852A-547C69637347}
+		{9C22B51E-0AC1-4A2E-82F9-FCEC68CBCC0C} = {7B186AED-A8DA-4FFF-9B3F-3CCD2A0B89DF}
+		{9E39847A-1631-4905-ADC4-5709C6AD1E94} = {FFD981B9-87FD-46E2-A14D-89B77BD42970}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F96B786F-537A-4E9A-8BBC-347A036FDF41}
+	EndGlobalSection
+EndGlobal
