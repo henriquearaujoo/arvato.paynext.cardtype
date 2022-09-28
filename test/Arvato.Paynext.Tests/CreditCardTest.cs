@@ -11,7 +11,7 @@ namespace Arvato.Paynext.Tests
         [InlineData("VICTOR G MUNIZ", "4485091335938218", "09/2024", "805", "Visa")]
         [InlineData("VICTOR G MUNIZ", "5427623094110890", "06/2027", "760", "MasterCard")]
         [InlineData("VICTOR G MUNIZ", "3010685692012347", "03/2027", "848", "Unknown")]
-        public void ShouldReturnTypeOfCard(
+        public void CardType_ShouldReturnCardType_WhenGivenCardData(
             string owner,
             string number,
             string issueDate,

@@ -15,7 +15,7 @@ public class CreditCardIssueDateTest
     [InlineData("01/2024", true)]
     [InlineData("06/2025", true)]
     [InlineData("05/2027", true)]
-    public void ShouldValidateGivenACardIssueDate(string issueDate, bool expected)
+    public void IsValid_ShouldValidateIssueDate_WhenGivenADate(string issueDate, bool expected)
     {
         var result = CardIssueDateValidator.IsValid(issueDate);
         Assert.Equal(expected, result);
