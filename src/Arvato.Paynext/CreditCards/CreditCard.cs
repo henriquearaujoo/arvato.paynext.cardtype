@@ -1,4 +1,5 @@
-﻿using Arvato.Paynext.Validation;
+﻿using Arvato.Paynext.Providers;
+using Arvato.Paynext.Validation;
 using FluentValidation;
 
 namespace Arvato.Paynext.CreditCards;
@@ -9,6 +10,7 @@ public class CreditCard
 
     public CreditCard(
         ICardTypeProvider cardTypeProvider,
+        IDateTimeProvider dateTimeProvider,
         string owner,
         string number,
         string issueDate,
@@ -21,7 +23,8 @@ public class CreditCard
         Cvc = cvc;
         CardType = _cardTypeProvider.GetCardType(Number);
 
-        new CreditCardValidator().ValidateAndThrow(this);
+        new CreditCardValidator(dateTimeProvider)
+            .ValidateAndThrow(this);
     }
 
     public string Owner { get; }

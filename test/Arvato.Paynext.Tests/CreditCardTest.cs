@@ -18,8 +18,12 @@ namespace Arvato.Paynext.Tests
             string cvc,
             string expected)
         {
+            var dateTimeProvider = new DateTimeProvider();
+            dateTimeProvider.Now = new DateTime(2022, 09, 29, 12, 0, 0);
+
             var creditCard = new CreditCard(
                 new CardTypeProvider(),
+                dateTimeProvider,
                 owner,
                 number,
                 issueDate,

@@ -1,4 +1,5 @@
-﻿using Arvato.Paynext.Validation;
+﻿using Arvato.Paynext.Providers;
+using Arvato.Paynext.Validation;
 
 namespace Arvato.Paynext.Tests;
 
@@ -17,7 +18,10 @@ public class CreditCardIssueDateTest
     [InlineData("05/2027", true)]
     public void IsValid_ShouldValidateIssueDate_WhenGivenADate(string issueDate, bool expected)
     {
-        var result = CardIssueDateValidator.IsValid(issueDate);
+        var dateTimeProvider = new DateTimeProvider();
+        dateTimeProvider.Now = new DateTime(2022, 09, 29, 12, 0, 0);
+
+        var result = new CardIssueDateValidator(dateTimeProvider).IsValid(issueDate);
         Assert.Equal(expected, result);
     }
 }

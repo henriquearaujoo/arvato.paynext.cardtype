@@ -1,12 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 using Arvato.Paynext.CreditCards;
+using Arvato.Paynext.Providers;
 using FluentValidation;
 
 namespace Arvato.Paynext.Validation;
 
 public class CreditCardValidator : AbstractValidator<CreditCard>
 {
-    public CreditCardValidator()
+    public CreditCardValidator(IDateTimeProvider dateTimeProvider)
     {
         RuleFor(x => x.Owner)
             .NotEmpty().WithMessage("Card owner field is required.");
@@ -30,7 +31,8 @@ public class CreditCardValidator : AbstractValidator<CreditCard>
         RuleFor(x => x.IssueDate)
             .Custom((issueDate, context) =>
             {
-                if (!CardIssueDateValidator.IsValid(issueDate))
+                var isValid = new CardIssueDateValidator(dateTimeProvider).IsValid(issueDate);
+                if (!isValid)
                     context.AddFailure("Card issue date is invalid.");
             });
         RuleFor(x => x)
